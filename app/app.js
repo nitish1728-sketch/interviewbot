@@ -3,7 +3,7 @@ const path = require("path");
 const app = express();
 const hbs = require("hbs");
 require("./database/conn");
-const Register = require("./model/Register");
+const Register = require("./model/register");
 const port = process.env.PORT || 3000;
 const static_path = path.join(__dirname, "../app/assets");
 console.log(path.join(__dirname, "../app/assets"))
