@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning</title>
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+
+<body>
+    <section>
+        <div class="image">
+            <img src="images/1.jpg" alt="">
+        </div>
+        <div class="content">
+            <div class="form_sign_in">
+                <h2>Login</h2>
+                <form action="/login" method="post">
+                    <div class="input">
+                        <span>Gmail</span>
+                        <input type="text" name="Gmail"  autocomplete="off">
+                        <!-- <p class="user1">Success</p> -->
+                    </div>
+                    <div class="input">
+                        <span>Password</span>
+                        <input type="password" name="Password" required id="pd"> </div>
+                    {{!-- <div class="input">
+                        <span>User or Admin</span>
+                        <select name="" id="user">
+                            <option value="">User</option>
+                            <option value="">Admin</option>
+                        </select>
+                    </div> --}}
+                    <div class="input">
+                        <input type="submit" value="Sign in">
+                        <span>Don't have an account?
+                            <a href="/register" class="sign_up">Sign up</a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+</html>

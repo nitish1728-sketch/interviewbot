@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+section {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+section .image {
+    position: relative;
+    width: 65%;
+    height: 100%;
+}
+
+section .image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section .image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(225deg, #50b0e7, #ffffff);
+    z-index: 1;
+    mix-blend-mode: multiply;
+    opacity: 100%;
+}
+
+section .content {
+    display: flex;
+    width: 35%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section .content .form_sign_up {
+    width: 80%;
+}
+
+section .content .form_sign_up h2 {
+    color: #565e5e;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid#50b0e7;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.progress_bar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+}
+
+.progress_bar::before,
+.progress_line {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 7px;
+    background-color: #dcdcdc;
+    z-index: -1;
+}
+
+.progress_line {
+    background-color: #50b0e7;
+    width: 0%;
+}
+
+.progress {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #dcdcdc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.progress::before {
+    counter-increment: step;
+    content: counter(step);
+}
+
+.progress::after {
+    content: attr(data-title);
+    position: absolute;
+    top: 40px;
+    font-size: 20px;
+    color: #565e5e;
+}
+
+.progress_active {
+    background-color: #50b0e7;
+    color: white;
+}
+
+.input_group {
+    display: none;
+}
+
+.input_group_active {
+    display: block;
+    animation: slide 500ms ease-in-out forwards;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(200%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+section .content .form_sign_up .input {
+    margin-bottom: 20px;
+    transform: translateY(70%);
+}
+
+section .content .form_sign_up .input_gender {
+    transform: translateY(70%);
+}
+
+section .content .form_sign_up .input span {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #565e5e;
+    font-weight: 300;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+section .content .form_sign_up .input_gender span {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #565e5e;
+    font-weight: 300;
+    font-size: 19px;
+    letter-spacing: 1px;
+    margin-right: 50px;
+    transform: translateY(-15%);
+}
+
+section .content .form_sign_up .input_gender label {
+    font-size: 16px;
+    margin-bottom: 20px;
+    display: inline-block;
+    color: #565e5e;
+    font-weight: 300;
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+section .content .form_sign_up .input input {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid#565e5e;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #0f0f0f;
+    background: transparent;
+    border-radius: 3px;
+}
+
+section .content .form_sign_up .input textarea {
+    width: 100%;
+    outline: none;
+    border: 1px solid#565e5e;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #0f0f0f;
+    background: transparent;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+section .content .form_sign_up .input input:valid {
+    border: 2px solid #089e42;
+}
+
+section .content .form_sign_up .input .Next {
+    background: #50b0e7;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: 45%;
+    padding: 10px 20px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-end;
+    display: flex;
+    border-radius: 3px;
+    transform: translateX(50%);
+    text-decoration: none;
+}
+
+section .content .form_sign_up .input .Next:hover {
+    background: #078fdd;
+}
+
+section .content .form_sign_up .input_button .Previous {
+    background: #50b0e7;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    width: 45%;
+    padding: 10px 20px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    border-radius: 3px;
+    transform: translate(0%, 100%);
+    text-decoration: none;
+}
+
+section .content .form_sign_up .input_button .Next {
+    background: #50b0e7;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: 45%;
+    padding: 10px 20px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-end;
+    display: flex;
+    border-radius: 3px;
+    transform: translateX(120%);
+    text-decoration: none;
+}
+
+section .content .form_sign_up .input_button #Submit {
+    background: #50b0e7;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: 45%;
+    padding: 10px 20px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-end;
+    display: flex;
+    border-radius: 3px;
+    transform: translate(120%);
+    text-decoration: none;
+}
+
+section .content .form_sign_up .input input[type="submit"] {
+    background: #50b0e7;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+section .content .form_sign_up .input input[type="submit"]:hover {
+    background: #078fdd;
+}
+
+@media(max-width:950px) {
+    .progress::after {
+        color: #ffffff;
+    }
+    section .image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    section .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    section .content .form_sign_up h2 {
+        color: #ffffff;
+    }
+    section .content .form_sign_up .input input::placeholder,
+    section .content .form_sign_up .input span {
+        color: #ffffff;
+    }
+    section .content .form_sign_up .input input,
+    section .content .form_sign_up .input textarea {
+        border: 1px solid#ffffff;
+        color: #ffffff;
+    }
+    section .content .form_sign_up {
+        width: 70%;
+        padding: 60px;
+    }
+    section .content .form_sign_up .input_gender span {
+        color: #ffffff;
+    }
+    section .content .form_sign_up .input_gender label {
+        color: #ffffff;
+    }
+}
+
+@media(max-width:570px) {
+    section .content .form_sign_up {
+        width: 100%;
+        padding: 60px;
+    }
+}
+
+@media(max-width:390px) {
+    .progress::after {
+        display: none;
+    }
+}

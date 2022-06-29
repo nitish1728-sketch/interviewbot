@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning</title>
+    <link rel="stylesheet" href="css/registration.css">
+    <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
+
+</head>
+
+<body>
+    <section>
+        <div class="image">
+            <img src="images/1.jpg" alt="">
+        </div>
+        <div class="content">
+            <div class="form_sign_up">
+                <h2>Register</h2>
+                <form action="/register" method="post">
+
+                    <div class="progress_bar">
+                        <div class="progress_line" id="progress_line"></div>
+                        <div class="progress progress_active" data-title="Personal"></div>
+                        <div class="progress" data-title="Contact"></div>
+                        <div class="progress" data-title="Education"></div>
+                        <div class="progress" data-title="Projects"></div>
+                    </div>
+                    <div class="input_group input_group_active">
+                        <div class="input">
+                            <span>First Name</span>
+                            <input type="text" name="FirstName" required>
+                        </div>
+
+                        <div class="input">
+                            <span>Last Name</span>
+                            <input type="text"name="LastName" required>
+                        </div>
+
+                        <div class="input">
+                            <span>Date of Birth</span>
+                            <input type="date" name="date">
+                        </div>
+                        <div class="input">
+                            <span>Nationality</span>
+                            <input type="text" name="Nationality" required>
+                        </div>
+                        <div class="input_gender">
+                            <span>Gender</span>
+                            <input type="radio" name="gender" id="male" value="male">
+                            <label for="male">Male</label>
+                            <input type="radio" name="gender" id="female" value="female">
+                            <label for="female">Female</label>
+                        </div>
+
+                        <div class="input">
+                            <a href="#" class="Next">Next</a>
+
+                        </div>
+                        <div class="input">
+                            <center>
+                                <span>Dont have an account?
+                                    <a href="/login" class="sign_in">Sign in</a>
+                                </span>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="input_group">
+                        <div class="input">
+                            <span>Father Name</span>
+                            <input type="text" name="FatherName" required>
+                        </div>
+                        <div class="input">
+                            <span>Phone Number</span>
+                            <input type="tel" name="PhoneNumber" equired>
+                        </div>
+                        <div class="input">
+                            <span>Address</span>
+                            <textarea id="" cols="30" rows="3" name="Address"></textarea>
+                        </div>
+                        <div class="input">
+                            <span>Pincode</span>
+                            <input type="tel" name="Pincode" required>
+                        </div>
+                        <div class="input">
+                            <span>Country</span>
+                            <input type="text" name="Country" required>
+                        </div>
+                        <div class="input_button">
+                            <a href="#" class="Previous">Previous</a>
+                            <a href="#" class="Next">Next</a>
+                        </div>
+                    </div>
+                    <div class="input_group">
+                        <div class="input">
+                            <span>College Name</span>
+                            <input type="text" required placeholder="Enter intermediate college name" name="CollegeName">
+                        </div>
+                        <div class="input">
+                            <span>CGPA</span>
+                            <input type="tel" required placeholder="Enter intermediate CGPA or percentage" name="IntermediateCGPA">
+                        </div>
+                        <div class="input">
+                            <span>School Name</span>
+                            <input type="text" required placeholder="Enter 10th class school name" name="SchoolName">
+                        </div>
+
+                        <div class="input">
+                            <span>CGPA</span>
+                            <input type="tel" required placeholder="Enter 10th CGPA or percentage"name="TenthCGPA">
+                        </div>
+                        <div class="input_button">
+                            <a href="#" class="Previous">Previous</a>
+                            <a href="#" class="Next">Next</a>
+
+                        </div>
+                    </div>
+                    <div class="input_group">
+
+                        <div class="input">
+                            <span>Upload Resume</span>
+                            <input type="file">
+                        </div>
+                        <div class="input">
+                            <span>Gmail</span>
+                            <input type="email" name="Gmail" placeholder="Enter your Gmail" required>
+                        </div>
+                        <div class="input">
+                            <span>Password</span>
+                            <input type="password" name="password" id="" required>
+                        </div>
+                        <div class="input">
+                            <span>Confirm Password</span>
+                            <input type="password" name="confirmpassword" id="" required>
+                        </div>
+                        <div class="input_button">
+                            <a href="#" class="Previous">Previous</a>
+                            <input type="submit" id="Submit" value="Sign up">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <script>
+        const prev = document.querySelectorAll(".Previous");
+        const next = document.querySelectorAll(".Next");
+        const progress = document.getElementById("progress_line");
+        const Steps = document.querySelectorAll(".input_group");
+        const progress_bar = document.querySelectorAll(".progress");
+
+        let StepsNum = 0;
+        next.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                StepsNum++;
+                updateSteps();
+                update_progress_bar()
+                console.log(StepsNum);
+            });
+        });
+        prev.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                StepsNum--;
+                updateSteps();
+                update_progress_bar();
+                console.log(StepsNum);
+            });
+        });
+
+        function updateSteps() {
+            Steps.forEach(Step => {
+                Step.classList.contains("input_group_active") &&
+                    Step.classList.remove("input_group_active");
+
+            })
+            Steps[StepsNum].classList.add("input_group_active");
+            console.log(StepsNum);
+        }
+
+        function update_progress_bar() {
+            progress_bar.forEach((progressStep, idx) => {
+                if (idx < StepsNum + 1) {
+                    progressStep.classList.add("progress_active");
+                } else {
+                    progressStep.classList.remove("progress_active");
+                }
+            });
+            const progress_bar_line = document.querySelectorAll(".progress_active");
+
+
+
+            progress.style.width = ((progress_bar_line.length - 1) / (progress_bar.length - 1)) * 100 + "%";
+
+        }
+    </script>
+</body>
+
+</html>
