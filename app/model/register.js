@@ -71,5 +71,5 @@ const CandidateSchema = new mongoose.Schema({
         required: true
     }
 })
-const Register = new mongoose.model("register", CandidateSchema);
-module.exports = Register;
+const register = new mongoose.model("register", CandidateSchema);
+module.exports = register;
