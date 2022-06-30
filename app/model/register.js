@@ -41,6 +41,10 @@ const CandidateSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    UniversityName: {
+        type: String,
+        required: true
+    },
     CollegeName: {
         type: String,
         required: true
@@ -57,6 +61,10 @@ const CandidateSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
+    UniversityCGPA: {
+        type: String,
+        required: true
+    },
     Gmail: {
         type: String,
         required: true,
@@ -71,5 +79,5 @@ const CandidateSchema = new mongoose.Schema({
         required: true
     }
 })
-const Register = new mongoose.model("register", CandidateSchema);
-module.exports = Register;
+const register = new mongoose.model("register", CandidateSchema);
+module.exports = register;

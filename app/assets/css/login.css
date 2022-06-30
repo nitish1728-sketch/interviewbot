@@ -4,6 +4,29 @@
     box-sizing: border-box;
 }
 
+.navbar {
+    background-color: #564486;
+    overflow: hidden;
+    position: relative;
+}
+
+.navbar .logo {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar .navigation a {
+    float: right;
+    color: #f2f2f2;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 21px;
+}
+
 section {
     position: relative;
     display: flex;
@@ -33,7 +56,7 @@ section .image::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(225deg, #50b0e7, #ffffff);
+    background: linear-gradient(225deg, #8e77cc, #564486);
     z-index: 1;
     mix-blend-mode: multiply;
     opacity: 100%;
@@ -58,7 +81,7 @@ section .content .form_sign_in h2 {
     font-size: 1.5em;
     text-transform: uppercase;
     margin-bottom: 20px;
-    border-bottom: 4px solid#50b0e7;
+    border-bottom: 4px solid#564486;
     display: inline-block;
     letter-spacing: 1px;
 }
@@ -90,10 +113,6 @@ section .content .form_sign_in .input input {
     border-radius: 3px;
 }
 
-section .content .form_sign_in .input input:valid {
-    border: 2px solid #089e42;
-}
-
 section .content .form_sign_in .input select {
     width: 100%;
     padding: 10px 20px;
@@ -108,7 +127,7 @@ section .content .form_sign_in .input select {
 }
 
 section .content .form_sign_in .input input[type="submit"] {
-    background: #50b0e7;
+    background: #564486;
     color: #ffffff;
     outline: none;
     border: none;
@@ -118,7 +137,7 @@ section .content .form_sign_in .input input[type="submit"] {
 }
 
 section .content .form_sign_in .input input[type="submit"]:hover {
-    background: #078fdd;
+    background: #2d1e52;
 }
 
 @media(max-width:850px) {

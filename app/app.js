@@ -3,7 +3,7 @@ const path = require("path");
 const app = express();
 const hbs = require("hbs");
 require("./database/conn");
-const Register = require("./model/Register");
+const Register = require("./model/register");
 const port = process.env.PORT || 3000;
 const static_path = path.join(__dirname, "../app/assets");
 console.log(path.join(__dirname, "../app/assets"))
@@ -34,10 +34,12 @@ app.post("/register", async(req, res) => {
         const Address = req.body.Address;
         const Pincode = req.body.Pincode;
         const Country = req.body.Country;
+        const UniversityName = req.body.UniversityName;
         const CollegeName = req.body.CollegeName;
         const IntermediateCGPA = req.body.IntermediateCGPA;
         const SchoolName = req.body.SchoolName;
         const TenthCGPA = req.body.TenthCGPA;
+        const UniversityCGPA = req.body.UniversityCGPA;
         const Gmail = req.body.Gmail;
         const Password = req.body.password;
         const CPassword = req.body.confirmpassword;
@@ -53,10 +55,12 @@ app.post("/register", async(req, res) => {
                 Address: req.body.Address,
                 Pincode: req.body.Pincode,
                 Country: req.body.Country,
+                UniversityName: req.body.UniversityName,
                 CollegeName: req.body.CollegeName,
                 IntermediateCGPA: req.body.IntermediateCGPA,
                 SchoolName: req.body.SchoolName,
                 TenthCGPA: req.body.TenthCGPA,
+                UniversityCGPA: req.body.UniversityCGPA,
                 Gmail: req.body.Gmail,
                 Password: Password,
                 ConfirmPassword: CPassword
