@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/interviewbot").then(() => {
+const db = "mongodb+srv://Nitish:nitish123@interviewbot.0luon.mongodb.net/interviewbot?retryWrites=true&w=majority";
+mongoose.connect(db).then(() => {
     console.log(`Database Connected successfully`);
 }).catch((e) => {
     console.log(`No connection`);
