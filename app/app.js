@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const hbs = require("hbs");
+const uri = process.env.MONGODB_URI;
 require("./database/conn");
 const Register = require("./model/register");
 const port = process.env.PORT || 3000;
@@ -67,7 +68,7 @@ app.post("/register", async(req, res) => {
             })
 
             const registered = await registerCandidate.save();
-            res.status(201).render("index");
+            res.status(201).render("confirm_register");
         } else {
             res.send(`Dear ${FirstName}.Your password are not matching.`)
         }
