@@ -18,7 +18,7 @@
             <h1>LOGO</h1>
         </div>
         <div class="navigation">
-            <a href="/register"><i class="fa fa-user"></i>Register</a>
+            <a href="/register"><i class="fa fa-user-plus"></i>Register</a>
             <a href="/login"><i class="fa fa-sign-in"></i>Login</a>
             <a href="/"><i class="fa fa-home"></i>Home</a>   
         </div>    
@@ -41,25 +41,27 @@
                     </div>
                     <div class="input_group input_group_active">
                         <div class="input">
-                            <span>First Name*</span>
-                            <input type="text" name="FirstName" required>
+                            <label for="FirstName_id">First Name<span>*</span></label>
+                            <input type="text" name="FirstName" id="FirstName_id"required>
                         </div>
 
                         <div class="input">
-                            <span>Last Name*</span>
-                            <input type="text"name="LastName" required>
+                            <label for="LastName_id">Last Name<span>*</span></label>
+                            <input type="text"name="LastName" id="LastName_id" required>
                         </div>
 
                         <div class="input">
-                            <span>Date of Birth*</span>
-                            <input type="date" name="date">
+                            <label for="date_id">Date of Birth<span>*</span></label>
+                            <input type="date" name="date" id="date_id">
                         </div>
+
                         <div class="input">
-                            <span>Nationality*</span>
-                            <input type="text" name="Nationality" required>
+                            <label for="Nationality_id">Nationality<span>*</span></label>
+                            <input type="text" name="Nationality" id="Nationality_id"required>
                         </div>
+
                         <div class="input_gender">
-                            <span>Gender*</span>
+                          <label for="male">Gender*</label>
                             <input type="radio" name="gender" id="male" value="male">
                             <label for="male">Male</label>
                             <input type="radio" name="gender" id="female" value="female">
@@ -80,24 +82,24 @@
                     </div>
                     <div class="input_group">
                         <div class="input">
-                            <span>Father Name*</span>
-                            <input type="text" name="FatherName" required>
+                           <label for="FatherName_id">Father Name<span>*</span></label>
+                            <input type="text" name="FatherName" id="FatherName_id"required>
                         </div>
                         <div class="input">
-                            <span>Phone Number*</span>
-                            <input type="tel" name="PhoneNumber" equired>
+                            <label for="PhoneNumber_id">Phone Number<span>*</span></label>
+                            <input type="tel" name="PhoneNumber" id="PhoneNumber_id"required>
                         </div>
                         <div class="input">
-                            <span>Address*</span>
-                            <textarea id="" cols="30" rows="3" name="Address"></textarea>
+                            <label for="Address_id">Address<span>*</span></label>
+                            <textarea id="Address_id" cols="30" rows="3" name="Address" required></textarea>
                         </div>
                         <div class="input">
-                            <span>Pincode*</span>
-                            <input type="tel" name="Pincode" required>
+                            <label for="Pincode_id">Pincode<span>*</span></label>
+                            <input type="tel" name="Pincode" id="Pincode_id"required>
                         </div>
                         <div class="input">
-                            <span>Country*</span>
-                            <input type="text" name="Country" required>
+                            <label for="Country_id">Country<span>*</span></label>
+                            <input type="text" name="Country" id="Country_id"required>
                         </div>
                         <div class="input_button">
                             <a href="#" class="Previous">Previous</a>
@@ -106,26 +108,26 @@
                     </div>
                     <div class="input_group">
                         <div class="input">
-                            <span>University Name*</span>
-                            <input type="text" required placeholder="Enter University name" name="UniversityName">
+                            <label for="UniversityName_id">University Name<span>*</span></label>
+                            <input type="text" required id="UniversityName_id"placeholder="Enter University name" name="UniversityName">
                         </div>
                         
                         <div class="input">
-                            <span>College Name*</span>
-                            <input type="text" required placeholder="Enter intermediate college name" name="CollegeName">
+                            <label for="CollegeName_id">College Name<span>*</span></label>
+                            <input type="text" required id="CollegeName_id"placeholder="Enter intermediate college name" name="CollegeName">
                         </div>
                         <div class="input">
-                            <span>CGPA*</span>
-                            <input type="tel" required placeholder="Enter intermediate CGPA or percentage" name="IntermediateCGPA">
+                            <label for="CGPA_id">CGPA<span>*</span></label>
+                            <input type="tel" required id="CGPA_id"placeholder="Enter intermediate CGPA or percentage" name="IntermediateCGPA">
                         </div>
                         <div class="input">
-                            <span>School Name*</span>
-                            <input type="text" required placeholder="Enter 10th class school name" name="SchoolName">
+                            <label for="SchoolName_id">School Name<span>*</span></label>
+                            <input type="text" required id="SchoolName_id"placeholder="Enter 10th class school name" name="SchoolName">
                         </div>
 
                         <div class="input">
-                            <span>CGPA*</span>
-                            <input type="tel" required placeholder="Enter 10th CGPA or percentage"name="TenthCGPA">
+                            <label for="TenthCGPA_id">CGPA<span>*</span></label>
+                            <input type="tel" required id ="TenthCGPA_id" placeholder="Enter 10th CGPA or percentage"name="TenthCGPA">
                         </div>
                         <div class="input_button">
                             <a href="#" class="Previous">Previous</a>
@@ -135,24 +137,24 @@
                     </div>
                     <div class="input_group">
                         <div class="input">
-                            <span>Present CGPA*</span>
-                            <input type="tel" required placeholder="Enter CGPA or percentage" name="UniversityCGPA">
+                            <label for="UniversityCGPA_id">Present CGPA<span>*</span></label>
+                            <input type="tel" required id="UniversityCGPA_id"placeholder="Enter CGPA or percentage" name="UniversityCGPA">
                         </div>
                         <div class="input">
-                            <span>Upload Resume</span>
-                            <input type="file">
+                            <label for="Resume_id">Upload Resume<span>*</span></label>
+                            <input type="file" id="Resume_id">
                         </div>
                         <div class="input">
-                            <span>Gmail*</span>
-                            <input type="email" name="Gmail" placeholder="Enter your Gmail" required>
+                            <label for="Gmail_id">Gmail<span>*</span></label>
+                            <input type="email" name="Gmail" id="Gmail_id"placeholder="Enter your Gmail" required>
                         </div>
                         <div class="input">
-                            <span>Password*</span>
-                            <input type="password" name="password" id="" required>
+                            <label for="Password_id">Password<span>*</span></label>
+                            <input type="password" name="password" id="Password_id" required>
                         </div>
                         <div class="input">
-                            <span>Confirm Password*</span>
-                            <input type="password" name="confirmpassword" id="" required>
+                            <label for="confirmpassword_id">Confirm Password<span>*</span></label>
+                            <input type="password" name="confirmpassword" id="confirmpassword_id" required>
                         </div>
                         <div class="input_button">
                             <a href="#" class="Previous">Previous</a>
