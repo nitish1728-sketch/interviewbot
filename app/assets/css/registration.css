@@ -182,7 +182,15 @@ section .content .form_sign_up .input span {
     font-size: 17px;
     letter-spacing: 1px;
 }
-
+section .content .form_sign_up .input label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #565e5e;
+    font-weight: 300;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
 section .content .form_sign_up .input_gender span {
     font-size: 16px;
     margin-bottom: 5px;
@@ -232,7 +240,8 @@ section .content .form_sign_up .input textarea {
     margin-bottom: 5px;
 }
 
-section .content .form_sign_up .input input:focus {
+section .content .form_sign_up .input input:focus,
+section .content .form_sign_up .input textarea:focus {
     border: 2px solid #564486;
 }
 
