@@ -82,7 +82,7 @@ app.post("/login", async(req, res) => {
         const password = req.body.Password;
         const useremail = await Register.findOne({ Gmail: Gmail });
         if (useremail.Password === password) {
-            res.status(201).render("index");
+            res.status(201).render("user");
         } else {
             res.send("Password is invalid.Pls enter correct password");
         }
